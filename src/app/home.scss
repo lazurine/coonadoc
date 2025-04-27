@@ -1,0 +1,197 @@
+@import "variables.scss";
+
+
+p, h1, h2, h3,  li {
+  color: white;
+}
+li:last-child {
+  color: $on-tertiary;
+  list-style: none;
+  translate: -1rem 0;
+  font-style: italic;
+}
+.button-like {
+  color: white;
+  border: 1px solid $green;
+  color: $green;
+  padding: 1rem 3rem;
+  border-radius: 0.5rem;
+  transition: 0.2s;
+}
+.button-like:hover {
+  background-color: $green;
+  color: white;
+}
+.content {
+  $border: 3px double $on-tertiary;
+  margin: 0 5vw;
+  padding: 2rem 5rem;
+  background-color: #0a0a0a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: $border;
+  border-left: $border;
+  border-right: $border;
+  gap: 5rem;
+  overflow: hidden;
+}
+.section {
+  display: flex;
+  justify-content: space-between;
+
+  border-right: 10px solid;
+  border-image-slice: 1;
+  border-width: 5px;
+  padding: 1rem 0;
+  border-image-source: linear-gradient(to left, #00000000, $green, #00000000);
+
+}
+.column {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.column > div {
+  padding: 2rem 0;
+}
+img {
+  margin: 0 4rem;
+}
+.section:nth-of-type(2n) {
+  flex-direction: row-reverse;
+}
+
+.news {
+  position: relative;
+  display: flex;
+}
+.new {
+  border: 1px solid $orange;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 0 1rem;
+  transition: 0.4s;
+  cursor: pointer;
+  height: 20rem;
+  overflow: hidden;
+}
+.new:hover {
+  background-color: $orange;
+}
+.new > img {
+  width: 10rem;
+  height: 10rem;
+}
+
+.grad {
+  position: absolute;
+  top: 0;
+  right: 21vw;
+  width: 5%;
+  height: 100%;
+  backdrop-filter: blur(4px);
+  pointer-events: none;
+}
+
+// TODO
+.gradient-blur {
+  z-index: 5;
+  background: red;
+  pointer-events: none;
+}
+.gradient-blur > div,
+.gradient-blur::before,
+.gradient-blur::after {
+  position: absolute;
+  inset: 0;
+}
+.gradient-blur::before {
+  content: "";
+  z-index: 1;
+  backdrop-filter: blur(0.5px);
+  mask: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 12.5%,
+    rgba(0, 0, 0, 1) 25%,
+    rgba(0, 0, 0, 0) 37.5%
+  );
+}
+.gradient-blur > div:nth-of-type(1) {
+  z-index: 2;
+  backdrop-filter: blur(1px);
+  mask: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 12.5%,
+    rgba(0, 0, 0, 1) 25%,
+    rgba(0, 0, 0, 1) 37.5%,
+    rgba(0, 0, 0, 0) 50%
+  );
+}
+.gradient-blur > div:nth-of-type(2) {
+  z-index: 3;
+  backdrop-filter: blur(2px);
+  mask: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 25%,
+    rgba(0, 0, 0, 1) 37.5%,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(0, 0, 0, 0) 62.5%
+  );
+}
+.gradient-blur > div:nth-of-type(3) {
+  z-index: 4;
+  backdrop-filter: blur(4px);
+  mask: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 37.5%,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(0, 0, 0, 1) 62.5%,
+    rgba(0, 0, 0, 0) 75%
+  );
+}
+.gradient-blur > div:nth-of-type(4) {
+  z-index: 5;
+  backdrop-filter: blur(8px);
+  mask: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 0, 0, 1) 62.5%,
+    rgba(0, 0, 0, 1) 75%,
+    rgba(0, 0, 0, 0) 87.5%
+  );
+}
+.gradient-blur > div:nth-of-type(5) {
+  z-index: 6;
+  backdrop-filter: blur(16px);
+  mask: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 62.5%,
+    rgba(0, 0, 0, 1) 75%,
+    rgba(0, 0, 0, 1) 87.5%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+.gradient-blur > div:nth-of-type(6) {
+  z-index: 7;
+  backdrop-filter: blur(32px);
+  mask: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 75%,
+    rgba(0, 0, 0, 1) 87.5%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+.gradient-blur::after {
+  content: "";
+  z-index: 8;
+  backdrop-filter: blur(64px);
+  mask: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 87.5%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+

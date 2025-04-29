@@ -34,6 +34,32 @@ li:last-child {
   border-image-source: linear-gradient(to left, #00000000, $green, #00000000);
 
 }
+.news-wrapper {
+  margin-top: -4rem;
+  position: relative;
+}
+.news-wrapper::after {
+  content: "\0203a";
+  color: white;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 80px;
+  pointer-events: none;
+  background: transparent;
+  backdrop-filter: blur(16px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  -webkit-mask-image: linear-gradient(to left, black 20%, transparent);
+  mask-image: linear-gradient(to left, black 20%, transparent);
+}
+.news-section  {
+  overflow: scroll;
+}
 .column {
   flex-grow: 1;
   display: flex;
@@ -80,16 +106,6 @@ li:last-child {
     gap: 5rem;
     overflow: hidden;
   }
-}
-
-.grad {
-  position: absolute;
-  top: 0;
-  right: 21vw;
-  width: 5%;
-  height: 100%;
-  backdrop-filter: blur(4px);
-  pointer-events: none;
 }
 
 // TODO

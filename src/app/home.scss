@@ -6,9 +6,9 @@ p, h1, h2, h3,  li {
   color: white;
 }
 li:last-child {
-  color: $on-tertiary;
+  font-weight: bolder;
   list-style: none;
-  translate: -1rem 0;
+  translate: -1rem 0.7rem;
   font-style: italic;
 }
 .content {

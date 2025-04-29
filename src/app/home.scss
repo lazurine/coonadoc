@@ -1,5 +1,6 @@
 @import "variables.scss";
 
+$content-border: 3px double $on-tertiary;
 
 p, h1, h2, h3,  li {
   color: white;
@@ -11,23 +12,21 @@ li:last-child {
   font-style: italic;
 }
 .content {
-  $border: 3px double $on-tertiary;
   margin: 0 5vw;
   padding: 2rem 5rem;
   background-color: #0a0a0a;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-right: $border;
-  border-left: $border;
-  border-top: $border;
+  border-right: $content-border;
+  border-left: $content-border;
+  border-top: $content-border;
   gap: 5rem;
   overflow: hidden;
 }
 .section {
   display: flex;
   justify-content: space-between;
-
   border-right: 10px solid;
   border-image-slice: 1;
   border-width: 5px;
@@ -51,6 +50,36 @@ li:last-child {
 .news {
   position: relative;
   display: flex;
+}
+
+@media (max-width: 800px) {
+  .column > img {
+    width: 60vw;
+  }
+  .section {
+    flex-direction: column;
+  }
+  .section:nth-of-type(2n) {
+    flex-direction: column;
+  }
+  .news-section {
+    flex-direction: row;
+  }
+  .column {
+    align-items: center;
+  }
+  .content {
+    margin: 0;
+    padding: 1rem 2rem;
+    background-color: #0a0a0a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: none;
+    border-top: $content-border;
+    gap: 5rem;
+    overflow: hidden;
+  }
 }
 
 .grad {

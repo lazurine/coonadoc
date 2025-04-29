@@ -12,6 +12,7 @@ a {
   padding: $v-size 3rem;
   border-radius: 0.5rem;
   transition: 0.2s;
+  white-space: nowrap;
 }
 a:hover {
   background-color: $green;

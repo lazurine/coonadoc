@@ -1,0 +1,19 @@
+@import "variables.scss";
+
+$v-size: 1rem;
+
+:host {
+  margin-top: $v-size;
+}
+
+a {
+  border: 1px solid $green;
+  color: $green;
+  padding: $v-size 3rem;
+  border-radius: 0.5rem;
+  transition: 0.2s;
+}
+a:hover {
+  background-color: $green;
+  color: white;
+}

@@ -69,6 +69,10 @@ li:last-child {
 .column > div {
   padding: 2rem 0;
 }
+.column > img {
+  width: 30vw;
+  margin-right: 3em;
+}
 .section:nth-of-type(2n) {
   flex-direction: row-reverse;
 }

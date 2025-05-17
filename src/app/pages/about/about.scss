@@ -1,0 +1,9 @@
+@import '../../variables.scss';
+
+.button-group {
+  display: grid;
+  grid-template-columns: 1fr 0fr ;
+}
+.button-group > * {
+  padding: 1em;
+}

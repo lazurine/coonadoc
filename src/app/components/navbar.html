@@ -1,0 +1,22 @@
+<div class="gradient-blur">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+<nav>
+  <img src="logo_color.svg" alt="alt">
+  <input id="nav-hamburger" type="checkbox"/>
+    <label class='nham-container' for="nav-hamburger">
+      <div class='nham-button'></div>
+    </label>
+  <ul>
+    <li><a [routerLink]="routes['home']" routerLinkActive="active-page">Inicio</a></li>
+    <li><a [routerLink]="routes['about']" routerLinkActive="active-page">Sobre nosotros</a></li>
+    <li><a [routerLink]="routes['news']" routerLinkActive="active-page">Noticias</a></li>
+    <li><a [routerLink]="routes['support']" routerLinkActive="active-page">Soporte</a></li>
+    <li><a [routerLink]="routes['services']" routerLinkActive="active-page">Servicios</a></li>
+  </ul>
+</nav>

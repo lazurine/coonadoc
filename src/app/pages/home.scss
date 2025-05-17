@@ -1,0 +1,16 @@
+@import "../variables.scss";
+
+li:last-child {
+  font-weight: bolder;
+  list-style: none;
+  translate: -1rem 0.7rem;
+  font-style: italic;
+}
+img {
+  width: 30vw;
+}
+@media (max-width: 800px) {
+  img {
+    width: 60vw;
+  }
+}

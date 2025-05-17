@@ -1,0 +1,43 @@
+@import '../variables.scss';
+// :host pseudo elemento no funciona
+.wrapper {
+  position: relative;
+  display: flex;
+}
+.wrapper:after {
+  content: "\0203a";
+  color: white;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80px;
+  height: 100%;
+  pointer-events: none;
+  background: transparent;
+  backdrop-filter: blur(64px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  -webkit-mask-image: linear-gradient(to left, black 20%, transparent);
+  mask-image: linear-gradient(to left, black 20%, transparent);
+}
+
+.section  {
+  display: flex;
+  justify-content: space-between;
+  border-right: 10px solid;
+  border-image-slice: 1;
+  border-width: 5px;
+  padding: 1rem 0;
+  border-image-source: linear-gradient(to left, #00000000, $green, #00000000);
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scrollbar-color: $orange transparent;
+}
+
+.news {
+  position: relative;
+  display: flex;
+}

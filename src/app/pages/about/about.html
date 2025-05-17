@@ -1,0 +1,49 @@
+<app-page-section>
+  <app-column [align]="'center'">
+    <h1>Misión</h1>
+    <p style="text-align:center;padding:0 3rem;">COONADOC desarrolla el modelo solidario, orientada a satisfacer necesidades y expectativas a través de servicios y beneficios de calidad, contribuyendo a la calidad de vida de sus asociados y familias.</p>
+  </app-column>
+  <app-column [align]="'center'">
+    <h1>Visión</h1>
+    <p style="text-align:center;padding:0 3rem;">COONADOC para el año 2029 incrementará su base social en más de 1.000 asociados, a través de la gestión social, el empoderamiento de los valores corporativos de eficiencia, eficacia y calidez y la prestación de servicios generando transformación de vida, con las políticas del buen-vivir y el bien-estar, siguiendo los principios del cooperativismo.</p>
+  </app-column>
+</app-page-section>
+
+<app-page-section>
+  <app-column [align]="'center'">
+    <h1>Objetivos</h1>
+    <ul>
+      <li>Crecer intitucionalmente, para obtener beneficios financieros y sociales que fortalezcan los principios cooperativos.</li>
+      <li>Sostener la base social a través de estrategias de colocación.</li>
+      <li>Realizar plan de educación. Cooperativa cumpliendo el quinto principio.</li>
+      <li>Cualificar nuestros procesos según la normatividad.</li>
+      <li>Cumplir con el principio de integración cooperativa.Sexto principio.</li>
+      <li>Mejorar la proyección social de la cooperativa.</li>
+      <li>Trabajar sobre el plande accióndel comité de bien-estar.</li>
+    </ul>
+  </app-column>
+  <app-column [align]="'center'">
+    <h1>Metas</h1>
+    <ul>
+      <li>Crecimiento mas de 1.000 asociados al 2029.</li>
+      <li>Colocar cartera, con un incremento anual del 5%.</li>
+      <li>Tener convenio con Fensecoop u otra entidad para hacer educación cooperativa al 100% de los asociados.</li>
+      <li>Cumplit y seguir las normas y leyes exigidas por los diferentes entes de control.</li>
+      <li>Trabajar para establecer relaciones del 100% con al federación y sus afiliadas.</li>
+      <li>Tener un proyecto sostenible con apropiación anual.</li>
+      <li>Brindar a los asociados actividades de calidad que mejoren su calidad de vida y la de sus familias.</li>
+    </ul>
+  </app-column>
+</app-page-section>
+<app-page-section>
+  <div class="button-group">
+    @for (doc of ["Reglamento de crédito", "Reglamento de Aportes", "Estatuto"]; track $index) {
+        <a-button [text]="'Leer '+ doc" [destination]="getDest(doc)" [typ]="anchorType.Href"/>
+        <a-button [text]="'Descargar PDF'" [destination]="getDest(doc)" [typ]="anchorType.Download"/>
+    }
+  </div>
+</app-page-section>
+<app-column [align]="'center'">
+  <h1>Nuestra historia</h1>
+  <a-button [text]="'Conocela aca'" [destination]="'historia'"/>
+</app-column>

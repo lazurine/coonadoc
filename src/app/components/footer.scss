@@ -1,10 +1,10 @@
-@import "variables.scss";
+@import "../variables.scss";
 
 footer {
   padding: 2.5rem 0 1.5rem 0;
   display: flex;
   justify-content: space-evenly;
-  background-color: #0a0a0a;
+  background-color: $bg1;
   border-top: 1px solid $on-tertiary;
 }
 

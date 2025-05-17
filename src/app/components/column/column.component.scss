@@ -1,0 +1,15 @@
+:host {
+  flex: 1;
+  border: solid 1px red;
+}
+div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (max-width: 800px) {
+  div {
+    align-items: center !important;
+  }
+}
